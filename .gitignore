@@ -1,0 +1,29 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+# Unity generated files
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.userprefs
+*.booproj
+*.svd
+*.pidb
+*.suo
+# Rider
+*.sln.DotSettings.user
+# Visual Studio
+.vs/
+# Mac
+.DS_Store
+# Windows
+Thumbs.db
+# VCS
+.plastic/
+ignore.conf

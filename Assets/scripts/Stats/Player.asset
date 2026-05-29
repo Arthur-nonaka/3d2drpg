@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2813aa94c16ebb24aae5aba2f22fb275, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  Name: CLOUD
+  Health: 30
+  Mana: 20
+  Attack: 15
+  SpecialAttack: 10
+  SpecialDefense: 4
+  Defense: 4
+  Speed: 20
+  Level: 1
+  Experience: 0
+  Velocity: 5
+  actionObjects:
+  - {fileID: 11400000, guid: 00d02bb433a101f479bd7588fc1be8fd, type: 2}
+  - {fileID: 11400000, guid: ef5398ff2fdf98f43849c41147dcfc0b, type: 2}
+  - {fileID: 11400000, guid: cab120c5375527f41b3cfe5de6558ebb, type: 2}

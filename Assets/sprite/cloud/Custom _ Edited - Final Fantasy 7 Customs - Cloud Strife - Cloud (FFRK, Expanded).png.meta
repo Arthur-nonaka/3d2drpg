@@ -1,0 +1,1762 @@
+fileFormatVersion: 2
+guid: 42957bf48e8659e449889c0c3dbf7b7a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 132
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba5e0a5ae09b2349ae5daa94ae78e3f
+      internalID: 1109801370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 132
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72af05b5574677445835f2ec1ad86ab6
+      internalID: -2066985290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 132
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3848227c00607f84a9dec83fda019004
+      internalID: 927459392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 132
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590c3dc9fda202f4b8e6f6936b899dd5
+      internalID: 1941294831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_4
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 132
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea5513d10ce835498241db6f6623eec
+      internalID: 1455883512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_5
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 132
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73296a074b33f7943bef5756dfec129b
+      internalID: 110288957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_6
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 117
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ec86495424cd946a6b757c4b446018
+      internalID: -1399191657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_7
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 117
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e46cc1f60084749a45fc5140bb3e70
+      internalID: 1982116027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_8
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 117
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889039b28198bb245bd6a72272765436
+      internalID: -623325594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_9
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 117
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaad7479bd8d2884e8c66c02def1b67d
+      internalID: 885421590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_10
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 117
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfed310e447047e4089be241f7b8ba58
+      internalID: 1031361079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_11
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 117
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ebb0c8532ea904e9ff33f7efa73db3
+      internalID: -217165098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_12
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 117
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b64aaadb42446468c899b288bcbfdf
+      internalID: -91352350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_13
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 117
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921924ddc26358d4abf3c4404b00f81b
+      internalID: 529958631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_14
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 117
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e73b81ae29fe5248b7fe93dca062aed
+      internalID: -326832780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_15
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 117
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdc07c5bed8e2741b46c745e02c34dd
+      internalID: -1392384678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_16
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 117
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e9d564a2b9fc74997d200418078426
+      internalID: -1058548219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_17
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 117
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041eec0c8f64d4042ab7e6bcf1239fbe
+      internalID: -1081675347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 106
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74a3eb6f64ee614d899e8e9e2387474
+      internalID: -78565524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_19
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 106
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d0bfc637d38ab47922ee0d57dc7416
+      internalID: 602357348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_20
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 106
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee617c5c2573a5842aab3269867ccf85
+      internalID: -187249226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_21
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 106
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf21b4f1949c0e44a82bf3efc789ce0
+      internalID: 832006243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_22
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 106
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c73a6d981a7073469d4ba5f37bb0e76
+      internalID: 362800093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_23
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 106
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ae19228d25c0d4c8e7896ed34669c8
+      internalID: 614033492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_24
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 91
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d169150ae5e41840950ba9649a1dbb6
+      internalID: 2142984195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_25
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 91
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a34471af034a804c8c528fbdf9e7328
+      internalID: -1721972285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_26
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 91
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08383236e135a484bbc90bd565903e39
+      internalID: 1225525583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_27
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 91
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d171b2a8342ae347a42cb77fcb00acb
+      internalID: -1985883301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_28
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 90
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4e13a94d7b7f44abcf03e7d43a63cc
+      internalID: 247809094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_29
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 90
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024fef84a6d65364d98450d3f98fda95
+      internalID: 259286604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_30
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 90
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f59f00bb52bd07459747e425a02d22b
+      internalID: -1333187612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_31
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 90
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d8f7cd5be342e429f9ae88d48907c1
+      internalID: -347509741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_32
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 80
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6159fb5abb018469d368008b156450
+      internalID: -685842181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_33
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 80
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74e5e6a72e67734b860f738b87ff433
+      internalID: -1058564091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_34
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 80
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53f10a283376084f9ae73276ee92337
+      internalID: -1744516285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_35
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 80
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b410ca85925ca4c92d00577c498e64
+      internalID: -1347837384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_36
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 64
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37fb8d831f9bced4bb8fbf89a115b46c
+      internalID: -601994677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_37
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 64
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1513e4d4e45cbac4a9bca85a070bb1a4
+      internalID: -697550535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_38
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 62
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2023880534a93de4d9c2ae918ef9f7c1
+      internalID: 1719676752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_39
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 62
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f16e0a2e3dc524895ba725b60aa154
+      internalID: 1499399638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_40
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 53
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f39fea3380b3a4e87cbdd50760a019
+      internalID: 655987547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_41
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 53
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3578b2940a6b5e8468a987323a021c8b
+      internalID: 476423018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_42
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 53
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6819f5cec1cb34793e170f362edb77
+      internalID: -397078174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_43
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 53
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5175c033f88cd4d8497d3d942eab42
+      internalID: 1175576559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_44
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 53
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d61861145ab35e489bf77ef89066ed0
+      internalID: -1223354671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_45
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 53
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a71a6bb66cc6946b5b020c394cd2fd
+      internalID: 1161997216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_46
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 55
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5e560c08c9e5341bfba0709f8128be
+      internalID: -993632028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_47
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 55
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be928b6ca64140b44be1be82e967dded
+      internalID: 776467951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_48
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 55
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a83d787f2e10484f8c7c6b39e87a2b8
+      internalID: -1825388558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_49
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 55
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b6ef1fcfd96b842a7d9a5590463d5b
+      internalID: 819191121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_50
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 53
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc56a66114d6bb04aba38e028048ddfe
+      internalID: -1835413009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_51
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 53
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e256979a4c08d459e770485aeda219
+      internalID: 1708683505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_52
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 35
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a05283d3341b06b4290df3eac7c94aff
+      internalID: -322470481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_53
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 35
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed36f8f1c43ef4147b7d956070876acf
+      internalID: 1298454070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_54
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 35
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92233a344719384f971e5052b3ad577
+      internalID: -160823300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_55
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 35
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9a7d07cf3d7ff4a87bd42074b58a76
+      internalID: 849537498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_56
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 26
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01aad0a1c3a26a34e9744ed8c01d2c92
+      internalID: 1234475254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_57
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 26
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789b16b15fd1efa4e8edf01dd6b5be78
+      internalID: 1461016853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_58
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 26
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009da9f085b76b446afa94f4ae4de8d5
+      internalID: 1439265196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_59
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 26
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9fba9330cb3d824294efb87b3288511
+      internalID: -1270698717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_60
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 26
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383c29560a83ba446b9301100aa19177
+      internalID: 96389929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_61
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 26
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6f7785ae1335d41a9f6cc67436c352
+      internalID: -1442974023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_62
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 35
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969b7747eade3834fa51d4b1dd31856a
+      internalID: -1752868339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_63
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 35
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b10f8af3831f51458e9f8f71e8f7cc8
+      internalID: 1799727566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_64
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 31
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db87faa02aaf3eb468d98b15e4aab10f
+      internalID: 1458193131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_65
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 6
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38400a6456304fb47a99fbcadede0c77
+      internalID: -1098884428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_66
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 4
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191008b046b321d4b911460fa6a53a84
+      internalID: -2028956148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK,
+        Expanded)_67
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 6
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ce69b0515e9274ea449044f85b64e4
+      internalID: -9484085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0b14382dc5015e64c9a07f90ce8d86e5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_0: 1109801370
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_1: -2066985290
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_10: 1031361079
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_11: -217165098
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_12: -91352350
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_13: 529958631
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_14: -326832780
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_15: -1392384678
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_16: -1058548219
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_17: -1081675347
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_18: -78565524
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_19: 602357348
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_2: 927459392
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_20: -187249226
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_21: 832006243
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_22: 362800093
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_23: 614033492
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_24: 2142984195
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_25: -1721972285
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_26: 1225525583
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_27: -1985883301
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_28: 247809094
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_29: 259286604
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_3: 1941294831
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_30: -1333187612
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_31: -347509741
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_32: -685842181
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_33: -1058564091
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_34: -1744516285
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_35: -1347837384
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_36: -601994677
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_37: -697550535
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_38: 1719676752
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_39: 1499399638
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_4: 1455883512
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_40: 655987547
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_41: 476423018
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_42: -397078174
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_43: 1175576559
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_44: -1223354671
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_45: 1161997216
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_46: -993632028
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_47: 776467951
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_48: -1825388558
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_49: 819191121
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_5: 110288957
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_50: -1835413009
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_51: 1708683505
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_52: -322470481
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_53: 1298454070
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_54: -160823300
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_55: 849537498
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_56: 1234475254
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_57: 1461016853
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_58: 1439265196
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_59: -1270698717
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_6: -1399191657
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_60: 96389929
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_61: -1442974023
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_62: -1752868339
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_63: 1799727566
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_64: 1458193131
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_65: -1098884428
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_66: -2028956148
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_67: -9484085
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_7: 1982116027
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_8: -623325594
+      Custom _ Edited - Final Fantasy 7 Customs - Cloud Strife - Cloud (FFRK, Expanded)_9: 885421590
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
