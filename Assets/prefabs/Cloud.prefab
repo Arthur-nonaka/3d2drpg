@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7844894373748498294}
   - component: {fileID: 7346068575376741835}
   - component: {fileID: 627599072776324439}
+  - component: {fileID: 5956614035270817361}
+  - component: {fileID: 3095102119996525331}
   m_Layer: 0
   m_Name: CLOUD
   m_TagString: Untagged
@@ -29,14 +31,15 @@ Transform:
   m_GameObject: {fileID: 7277091619381138380}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.0300198, y: -3.6593804, z: 12.478444}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 1.044, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 712921067936468006}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7074342605215859620
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -55,6 +58,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -76,10 +81,12 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1953278469, guid: cc4cad4a00d80c54b991483abd4d451d, type: 3}
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -1957667035, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,7 +95,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &7844894373748498294
 Animator:
@@ -119,7 +125,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7277091619381138380}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1a92a36f9d2e4a4fbb7644713dffa3d, type: 3}
   m_Name: 
@@ -136,8 +142,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f651b1f4184014d9a218b05ca5823b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 7844894373748498294}
-  Name: 
+  attackConfig: {fileID: 11400000, guid: 9affcca1a03882d489b7b0f7e6e029ff, type: 2}
+--- !u!114 &5956614035270817361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277091619381138380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 903667e4324b5e145b97c91896f7c280, type: 3}
+--- !u!114 &3095102119996525331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277091619381138380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 1.9343881e-16
+  m_labelHash: 2.3432027e-18
+  m_SpriteKey: 0
+  m_SpriteHash: 150813191
 --- !u!1 &8656027468742327976
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +198,7 @@ Transform:
   m_GameObject: {fileID: 8656027468742327976}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.0300198, y: 4.6593804, z: -12.488444}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

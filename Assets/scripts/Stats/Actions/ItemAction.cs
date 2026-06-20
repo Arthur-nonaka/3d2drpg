@@ -59,33 +59,34 @@ public class ItemAction : ScriptableObject, IAction
         BattleManager.Instance.PlayerChoseItem(this);
     }
 
-    public void Apply(Character target)
+    public (int, bool) Apply(Character target)
     {
         if (quantity <= 0)
-            return;
-        quantity--;
+            return (0, false);
 
         switch (effectType)
         {
             case ItemEffectType.Heal:
-                target.Heal(amount);
-                break;
+                return target.Heal(amount);
             case ItemEffectType.RestoreEnergy:
                 target.Energy += amount;
-                break;
+                return (0, false);
             // case ItemEffectType.Revive:
             //     if (target.IsDead)
             //         target.Revive(amount);
             //     break;
             case ItemEffectType.Damage:
                 target.TakeDamage(amount);
-                break;
+                return (amount, true);
             case ItemEffectType.DamageBoost:
                 target.AddStatusEffect(new BoostDamageStatusEffect(amount, turnsDuration));
-                break;
+                return (0, false);
             // case ItemEffectType.DefenseBoost:
             //     target.DefenseBoost(amount);
             //     break;
+            default:
+                Debug.LogWarning("Unknown item effect type: " + effectType);
+                return (0, false);
         }
     }
 }

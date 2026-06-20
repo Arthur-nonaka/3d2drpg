@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Health Pot
   m_EditorClassIdentifier: Assembly-CSharp::ItemAction
   actionName: Health Potion
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: aa6f64c29b6f4b6419dc1f392a805e4a, type: 3}
   effectType: 0
   targetType: 0
   amount: 15
-  quantity: 1
+  turnsDuration: 0
+  quantity: 9

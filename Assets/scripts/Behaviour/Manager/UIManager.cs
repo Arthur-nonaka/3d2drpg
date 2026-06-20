@@ -63,17 +63,17 @@ public class UIManager : MonoBehaviour
 
     public void OnButtonPressed(ButtonType type)
     {
-        switch (type) {
-            // case ButtonType.Attack:
-            //     BattleManager.Instance.PlayerChoseAttack();
-            //     break;
-            //     case ButtonType.Defend:
-            //         BattleManager.Instance.PlayerChoseDefend();
-            //         break;
-            //     case ButtonType.UseItem:
-            //         BattleManager.Instance.PlayerChoseUseItem();
-            //         break;
-        }
+        // switch (type) {
+        // case ButtonType.Attack:
+        //     BattleManager.Instance.PlayerChoseAttack();
+        //     break;
+        //     case ButtonType.Defend:
+        //         BattleManager.Instance.PlayerChoseDefend();
+        //         break;
+        //     case ButtonType.UseItem:
+        //         BattleManager.Instance.PlayerChoseUseItem();
+        //         break;
+        // }
         SetButtonInteractable(false);
     }
 

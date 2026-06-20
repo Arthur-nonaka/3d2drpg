@@ -14,6 +14,7 @@ public class OptionsMenu : MonoBehaviour
     public Transform buttonContainer;
     public Transform panelsContainer;
     public RectTransform selectionDot;
+    public AudioClip changeSound;
 
     public float dotDistance = -30f;
 
@@ -45,14 +46,16 @@ public class OptionsMenu : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
             MoveSelection(-1);
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
             MoveSelection(1);
-        if (Input.GetKeyDown(KeyCode.Z))
+        else if (Input.GetKeyDown(KeyCode.Z))
             SelectCurrent(true);
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
             SelectCurrent(false);
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.X))
+        else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.X))
             PopLayer();
+        else
+            return;
     }
 
     public void ShowOptions(List<IAction> rootActions)
@@ -108,7 +111,7 @@ public class OptionsMenu : MonoBehaviour
             {
                 var btnObj = Instantiate(buttonPrefab, panel.transform);
                 var text = btnObj.GetComponentInChildren<TMPro.TMP_Text>();
-                var icon = btnObj.GetComponentInChildren<Image>();
+                var icon = btnObj.transform.Find("Icon")?.GetComponentInChildren<Image>();
                 var button = btnObj.GetComponent<Button>();
 
                 text.text = action.Name;
@@ -200,6 +203,7 @@ public class OptionsMenu : MonoBehaviour
             selectionDot.SetParent(currentButtons[selectedIndex], false);
             selectionDot.anchoredPosition = new Vector2(dotDistance, 0);
             selectionDot.gameObject.SetActive(true);
+            SoundManager.Instance.PlaySettings(changeSound);
         }
     }
 

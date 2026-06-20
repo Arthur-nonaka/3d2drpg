@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6075430001427481069}
   - component: {fileID: 135097457367014979}
+  - component: {fileID: 7828388408841096266}
   m_Layer: 0
   m_Name: FloatingNumber
   m_TagString: Untagged
@@ -61,6 +62,18 @@ MonoBehaviour:
   digitSpacing: 0.7
   initialDelay: 20
   digitAppearTime: 0.5
+--- !u!114 &7828388408841096266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2563346163445672298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a92a36f9d2e4a4fbb7644713dffa3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Billboard
 --- !u!1 &5411133186696865660
 GameObject:
   m_ObjectHideFlags: 0

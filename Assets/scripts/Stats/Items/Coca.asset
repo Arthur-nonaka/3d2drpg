@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Coca
   m_EditorClassIdentifier: Assembly-CSharp::ItemAction
   actionName: Coca
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: aa6f64c29b6f4b6419dc1f392a805e4a, type: 3}
   effectType: 4
   targetType: 0
   amount: 15
   turnsDuration: 5
-  quantity: 1
+  quantity: 9

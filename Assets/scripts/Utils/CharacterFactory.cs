@@ -2,7 +2,7 @@ public static class CharacterFactory
 {
     public static Character CreateFromPlayerStats(PlayerStats playerStats)
     {
-        return new Character(
+        var character = new Character(
             name: playerStats.Name,
             isPlayerControlled: true,
             maxHP: playerStats.Health,
@@ -13,15 +13,37 @@ public static class CharacterFactory
             specialDefense: playerStats.SpecialDefense,
             attack: playerStats.Attack,
             specialAttack: playerStats.SpecialAttack,
+            luck: playerStats.Luck,
             actions: playerStats.Actions,
             level: playerStats.Level,
             experience: playerStats.Experience
+        );
+
+        return character;
+    }
+
+    public static Character CreateFromEnemyStats(EnemyStats enemyStats)
+    {
+        return new Character(
+            name: enemyStats.Name,
+            isPlayerControlled: false,
+            maxHP: enemyStats.Health,
+            hp: enemyStats.Health,
+            energy: enemyStats.Mana,
+            speed: enemyStats.Speed,
+            defense: enemyStats.Defense,
+            specialDefense: enemyStats.SpecialDefense,
+            attack: enemyStats.Attack,
+            specialAttack: enemyStats.SpecialAttack,
+            luck: enemyStats.Luck,
+            level: 1,
+            experience: enemyStats.XPReward
         );
     }
 
     public static Character CreateFromSaveData(CharacterSaveData saveData)
     {
-        return new Character(
+        var character = new Character(
             name: saveData.name,
             isPlayerControlled: true,
             maxHP: saveData.maxHP,
@@ -32,8 +54,11 @@ public static class CharacterFactory
             specialDefense: saveData.specialDefense,
             attack: saveData.attack,
             specialAttack: saveData.specialAttack,
+            luck: saveData.luck,
             level: saveData.level,
             experience: saveData.currentXP
         );
+
+        return character;
     }
 }

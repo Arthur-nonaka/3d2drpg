@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using Unity.Mathematics;
+using UnityEngine;
 
 public class Character
 {
@@ -13,6 +15,10 @@ public class Character
     public int SpecialDefense { get; set; }
     public int Attack { get; set; }
     public int SpecialAttack { get; set; }
+    public int Luck { get; set; }
+
+    public float CritChance => Luck * 0.005f;
+    public float CritMultiplier => 2f;
 
     public int level = 1;
     public int Experience { get; set; }
@@ -25,7 +31,7 @@ public class Character
     public List<IStatusEffect> ActiveEffects { get; private set; } = new List<IStatusEffect>();
     public bool IsDead => HP <= 0;
 
-    public LevelUpStatGain LevelUpStats { get; set; }
+    public Action OnDeath;
 
     public Character(
         string name,
@@ -38,6 +44,7 @@ public class Character
         int specialDefense,
         int attack,
         int specialAttack,
+        int luck = 5,
         int level = 1,
         int experience = 0,
         List<IAction> actions = null
@@ -53,6 +60,7 @@ public class Character
         SpecialDefense = specialDefense;
         Attack = attack;
         SpecialAttack = specialAttack;
+        Luck = luck;
         this.level = level;
         Experience = experience;
         Actions = actions ?? new List<IAction>();
@@ -112,15 +120,25 @@ public class Character
         HP -= amount;
         if (HP < 0)
             HP = 0;
+        if (HP == 0)
+        {
+            OnDeath?.Invoke();
+        }
+
         NotifyHealthChanged();
     }
 
-    public void Heal(int amount)
+    public (int, bool) Heal(int amount)
     {
         HP += amount;
+        int hpRestored = amount;
         if (HP > MaxHP)
+        {
+            hpRestored = MaxHP - (HP - amount);
             HP = MaxHP;
+        }
         NotifyHealthChanged();
+        return (hpRestored, true);
     }
 
     public event Action<int, int> OnHealthChanged;
@@ -144,15 +162,13 @@ public class Character
     {
         level++;
         Experience = 0;
-        if (LevelUpStats != null)
-        {
-            MaxHP += LevelUpStats.HP;
-            HP = MaxHP;
-            Attack += LevelUpStats.Attack;
-            Defense += LevelUpStats.Defense;
-            SpecialAttack += LevelUpStats.SpecialAttack;
-            SpecialDefense += LevelUpStats.SpecialDefense;
-            Speed += LevelUpStats.Speed;
-        }
+        MaxHP += LevelUpStatsGain.HealthGain;
+        HP = MaxHP;
+        Attack += LevelUpStatsGain.AttackGain;
+        Defense += LevelUpStatsGain.DefenseGain;
+        SpecialAttack += LevelUpStatsGain.SpecialAttackGain;
+        SpecialDefense += LevelUpStatsGain.SpecialDefenseGain;
+        Speed += LevelUpStatsGain.SpeedGain;
+        Luck += LevelUpStatsGain.LuckGain;
     }
 }

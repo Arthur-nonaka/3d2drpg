@@ -12,9 +12,11 @@ public class PlayerStats : ScriptableObject
     public int SpecialDefense;
     public int Defense;
     public int Speed;
+    public int Luck = 5;
     public int Level;
     public int Experience;
     public float Velocity = 5f;
+    public GameObject prefab;
 
     [SerializeField]
     private List<ScriptableObject> actionObjects;

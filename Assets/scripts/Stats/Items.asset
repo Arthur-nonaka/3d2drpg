@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Items
   m_EditorClassIdentifier: Assembly-CSharp::ActionCategory
   categoryName: Items
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: aa6f64c29b6f4b6419dc1f392a805e4a, type: 3}
   actionObjects:
   - {fileID: 11400000, guid: 9cec64a3208766a41b0c22029724f39b, type: 2}
   - {fileID: 11400000, guid: 53a0ec7aefff45f488d11f68ba8dc0cc, type: 2}

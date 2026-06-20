@@ -42,6 +42,7 @@ public static class SaveManager
                     specialAttack = playerStats.SpecialAttack,
                     specialDefense = playerStats.SpecialDefense,
                     speed = playerStats.Speed,
+                    luck = playerStats.Luck,
                     unlockedActionNames = new List<string>(),
                 },
             },

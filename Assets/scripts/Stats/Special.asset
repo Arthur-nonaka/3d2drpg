@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Special
   m_EditorClassIdentifier: 
   categoryName: Special
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 665cfea7092ce034e886e15fd7b83aab, type: 3}
   actionObjects:
   - {fileID: 11400000, guid: e942fb0b6a94f2d4db28c53c5174e962, type: 2}

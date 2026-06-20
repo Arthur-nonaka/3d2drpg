@@ -338,7 +338,7 @@ TextureImporter:
         width: 63
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -347,6 +347,28 @@ TextureImporter:
       bones: []
       spriteID: 79e5ec33932594f48ab427eb706040f0
       internalID: -905933725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfsheet1_1
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 160
+        width: 63
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f41d01dc4ca02d489bd553882e8c82e
+      internalID: 726980155
       vertices: []
       indices: 
       edges: []

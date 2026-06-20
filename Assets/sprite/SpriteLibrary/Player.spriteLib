@@ -1,0 +1,254 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrarySourceAsset
+  m_Library:
+  - m_Name: Idle
+    m_Hash: 1008081451
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: kael_walking-Sheet_0
+      m_Hash: 297858126
+      m_Sprite: {fileID: 495784865, guid: 46f22f37a5f511548910dea98dd8065d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 495784865, guid: 46f22f37a5f511548910dea98dd8065d, type: 3}
+    - m_Name: kael_walking-Sheet_1
+      m_Hash: 650626264
+      m_Sprite: {fileID: -612993609, guid: 46f22f37a5f511548910dea98dd8065d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -612993609, guid: 46f22f37a5f511548910dea98dd8065d, type: 3}
+    - m_Name: kael_walking-Sheet_2
+      m_Hash: 1070503266
+      m_Sprite: {fileID: 1830381865, guid: 46f22f37a5f511548910dea98dd8065d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1830381865, guid: 46f22f37a5f511548910dea98dd8065d, type: 3}
+    - m_Name: kael_walking-Sheet_3
+      m_Hash: 147432948
+      m_Sprite: {fileID: 499852784, guid: 46f22f37a5f511548910dea98dd8065d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 499852784, guid: 46f22f37a5f511548910dea98dd8065d, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
+  - m_Name: Walk
+    m_Hash: 765711723
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: kael_sprite_sheet_0
+      m_Hash: 379461685
+      m_Sprite: {fileID: -1854008169, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1854008169, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_1
+      m_Hash: 563679395
+      m_Sprite: {fileID: -1058667727, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1058667727, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_2
+      m_Hash: 948977945
+      m_Sprite: {fileID: 103475360, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 103475360, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_3
+      m_Hash: 261583247
+      m_Sprite: {fileID: 1071507162, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1071507162, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_4
+      m_Hash: 301196332
+      m_Sprite: {fileID: -460051605, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -460051605, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_5
+      m_Hash: 653579450
+      m_Sprite: {fileID: -133595304, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -133595304, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_6
+      m_Hash: 1073579264
+      m_Sprite: {fileID: 977302095, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 977302095, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_7
+      m_Hash: 150648214
+      m_Sprite: {fileID: -1024174807, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1024174807, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_8
+      m_Hash: 407218183
+      m_Sprite: {fileID: -1794462681, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1794462681, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_9
+      m_Hash: 792893585
+      m_Sprite: {fileID: 895593717, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 895593717, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_10
+      m_Hash: 992326755
+      m_Sprite: {fileID: -2027163262, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2027163262, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_11
+      m_Hash: 203588853
+      m_Sprite: {fileID: 2071289696, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2071289696, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_35
+      m_Hash: 964239982
+      m_Sprite: {fileID: 1339918079, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1339918079, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_34
+      m_Hash: 243143416
+      m_Sprite: {fileID: -1100947324, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1100947324, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_33
+      m_Hash: 270174043
+      m_Sprite: {fileID: -175968114, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -175968114, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_32
+      m_Hash: 656259021
+      m_Sprite: {fileID: 1914353049, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1914353049, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_31
+      m_Hash: 1041557111
+      m_Sprite: {fileID: -1185030068, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1185030068, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_30
+      m_Hash: 152295137
+      m_Sprite: {fileID: -1106055001, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1106055001, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_29
+      m_Hash: 701783812
+      m_Sprite: {fileID: -1172700982, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1172700982, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_28
+      m_Hash: 517173138
+      m_Sprite: {fileID: -1494029977, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1494029977, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_27
+      m_Hash: 241988099
+      m_Sprite: {fileID: 1342060084, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1342060084, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_26
+      m_Hash: 963330709
+      m_Sprite: {fileID: 1261871469, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1261871469, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_25
+      m_Hash: 543298351
+      m_Sprite: {fileID: -1928899834, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1928899834, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_24
+      m_Hash: 392504249
+      m_Sprite: {fileID: 1030230513, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1030230513, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 24
+  - m_Name: Attack
+    m_Hash: 7088141
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: kael_sprite_sheet_19
+      m_Hash: 49876167
+      m_Sprite: {fileID: 1298947515, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1298947515, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_20
+      m_Hash: 269019040
+      m_Sprite: {fileID: -1358236415, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1358236415, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_21
+      m_Hash: 655349558
+      m_Sprite: {fileID: -1459983334, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1459983334, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_22
+      m_Hash: 1040615052
+      m_Sprite: {fileID: -1249719760, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1249719760, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_23
+      m_Hash: 151107098
+      m_Sprite: {fileID: 220266876, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 220266876, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 5
+  - m_Name: Hit
+    m_Hash: 580870305
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: kael_sprite_sheet_12
+      m_Hash: 355194191
+      m_Sprite: {fileID: -2006251182, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2006251182, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: Down
+    m_Hash: 1020083973
+    m_CategoryList: []
+    m_OverrideEntries: []
+    m_FromMain: 0
+    m_EntryOverrideCount: 0
+  - m_Name: IdleCombat
+    m_Hash: 626984207
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: kael_sprite_sheet_13
+      m_Hash: 573367769
+      m_Sprite: {fileID: -1957667035, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1957667035, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_14
+      m_Hash: 1011380346
+      m_Sprite: {fileID: 1957279555, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1957279555, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_15
+      m_Hash: 189743340
+      m_Sprite: {fileID: 2102776693, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2102776693, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_16
+      m_Hash: 306581846
+      m_Sprite: {fileID: -1649623009, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1649623009, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_17
+      m_Hash: 625025472
+      m_Sprite: {fileID: -928656978, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -928656978, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    - m_Name: kael_sprite_sheet_18
+      m_Hash: 905854033
+      m_Sprite: {fileID: 1667518639, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1667518639, guid: d79e6d3ca3c6db643867248ffb0b517f, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 639174356763875551
+  m_Version: 1

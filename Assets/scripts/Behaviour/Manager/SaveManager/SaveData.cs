@@ -18,10 +18,12 @@ public class CharacterSaveData
     public int HP;
     public int maxHP;
     public int mana;
+    public LevelUpStatGain levelUpStats;
     public int attack,
         defense,
         specialAttack,
         specialDefense,
-        speed;
+        speed,
+        luck;
     public List<string> unlockedActionNames;
 }

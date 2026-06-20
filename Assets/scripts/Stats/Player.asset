@@ -20,9 +20,11 @@ MonoBehaviour:
   SpecialDefense: 4
   Defense: 4
   Speed: 20
+  Luck: 100
   Level: 1
   Experience: 0
   Velocity: 5
+  prefab: {fileID: 8656027468742327976, guid: 5cf2c6bc39f8add49b2a493944f13e30, type: 3}
   actionObjects:
   - {fileID: 11400000, guid: 00d02bb433a101f479bd7588fc1be8fd, type: 2}
   - {fileID: 11400000, guid: ef5398ff2fdf98f43849c41147dcfc0b, type: 2}

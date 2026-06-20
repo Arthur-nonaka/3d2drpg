@@ -21,6 +21,13 @@ public class BattleManager : MonoBehaviour
     [SerializeField]
     private List<EnemyStats> enemyStats;
 
+    [Header("Spawn Points")]
+    [SerializeField]
+    private Transform[] playerSpawnPoints;
+
+    [SerializeField]
+    private Transform[] enemySpawnPoints;
+
     [Header("Runtime Battle Data")]
     public List<Character> characters = new List<Character>();
     public List<Character> enemyCharacters = new List<Character>();
@@ -47,8 +54,11 @@ public class BattleManager : MonoBehaviour
         else
             GameStateManager.Instance.NewGame();
 
-        foreach (var c in playerStats)
+        characterViews.Clear();
+
+        for (int i = 0; i < playerStats.Count; i++)
         {
+            var c = playerStats[i];
             Character character;
             if (GameStateManager.Instance.HasSaveData())
             {
@@ -58,6 +68,7 @@ public class BattleManager : MonoBehaviour
                 if (savedChar != null)
                 {
                     character = CharacterFactory.CreateFromSaveData(savedChar);
+                    character.Actions = c.Actions;
                 }
                 else
                 {
@@ -69,26 +80,61 @@ public class BattleManager : MonoBehaviour
                 character = CharacterFactory.CreateFromPlayerStats(c);
             }
             characters.Add(character);
-            playerHealthUI.Initialize(characters[characters.Count - 1]);
+            playerHealthUI.Initialize(character);
+
+            if (c.prefab != null && i < playerSpawnPoints.Length)
+            {
+                var view = InstantiateCharacterView(
+                    c.prefab,
+                    character.Name,
+                    playerSpawnPoints[i].position
+                );
+                character.OnDeath += () => view.PlayDeathAnimation();
+                characterViews.Add(view);
+            }
         }
 
-        enemyCharacters = new List<Character>
+        var nameCount = new Dictionary<string, int>();
+        foreach (var c in enemyStats)
         {
-            new Character(
-                name: "WOLF",
-                isPlayerControlled: false,
-                maxHP: 100,
-                hp: 100,
-                energy: 10,
-                speed: 14,
-                defense: 6,
-                specialDefense: 4,
-                attack: 4,
-                specialAttack: 8,
-                level: 1,
-                experience: 50
-            ),
-        };
+            if (!nameCount.ContainsKey(c.Name))
+                nameCount[c.Name] = 0;
+            nameCount[c.Name]++;
+        }
+
+        var currentCount = new Dictionary<string, int>();
+        for (int i = 0; i < enemyStats.Count; i++)
+        {
+            var c = enemyStats[i];
+            var character = CharacterFactory.CreateFromEnemyStats(c);
+
+            var baseName = character.Name;
+            if (!currentCount.ContainsKey(baseName))
+                currentCount[baseName] = 0;
+            currentCount[baseName]++;
+
+            if (nameCount[baseName] > 1)
+                character.Name = $"{baseName} {currentCount[baseName]}";
+
+            enemyCharacters.Add(character);
+
+            if (c.prefab != null && i < enemySpawnPoints.Length)
+            {
+                var view = InstantiateCharacterView(
+                    c.prefab,
+                    character.Name,
+                    enemySpawnPoints[i].position
+                );
+                var HealthBar = view.GetComponentInChildren<EnemyHealthBar>();
+                character.OnHealthChanged += (hp, maxHp) =>
+                {
+                    float fillAmount = (float)hp / maxHp;
+                    HealthBar.UpdateHealthBar(fillAmount);
+                };
+                character.OnDeath += () => view.PlayDeathAnimation();
+                characterViews.Add(view);
+            }
+        }
 
         SpecialBarManager.Instance.ResetBar();
 
@@ -100,8 +146,24 @@ public class BattleManager : MonoBehaviour
         turnSystem.StartTurn();
     }
 
+    private CharacterView InstantiateCharacterView(
+        GameObject prefab,
+        string characterName,
+        Vector3 position
+    )
+    {
+        var instance = Instantiate(prefab, position, Quaternion.identity);
+        var view = instance.GetComponentInChildren<CharacterView>();
+        if (view != null)
+            view.gameObject.name = characterName;
+        return view;
+    }
+
     void HandleTurnStart(Character character)
     {
+        if (BattleIsOver())
+            return;
+
         current = character;
         Debug.Log($"{character.Name} started their turn.");
 
@@ -109,9 +171,9 @@ public class BattleManager : MonoBehaviour
         {
             Debug.Log($"{current.Name} is dead.");
             turnSystem.EndTurn();
-            BattleEnded();
             return;
         }
+
         // Process status effects that trigger at the start of the turn
         current.ProcessStartOfTurnEffects();
 
@@ -119,7 +181,6 @@ public class BattleManager : MonoBehaviour
         {
             Debug.Log($"{current.Name} died from a status effect.");
             turnSystem.EndTurn();
-            BattleEnded();
             return;
         }
 
@@ -140,6 +201,29 @@ public class BattleManager : MonoBehaviour
         }
     }
 
+    bool BattleIsOver()
+    {
+        var aliveEnemies = enemyCharacters.Where(e => !e.IsDead).ToList();
+        if (aliveEnemies.Count == 0)
+        {
+            BattleEnded();
+            return true;
+        }
+
+        var alivePlayers = characters.Where(c => c.IsPlayerControlled && !c.IsDead).ToList();
+        if (alivePlayers.Count == 0)
+        {
+            GameOver();
+            return true;
+        }
+        return false;
+    }
+
+    void GameOver()
+    {
+        Debug.Log("Game Over!");
+    }
+
     void ExecuteEnemyTurn()
     {
         if (current == null)
@@ -147,18 +231,8 @@ public class BattleManager : MonoBehaviour
 
         var alivePlayers = characters.Where(c => c.IsPlayerControlled && !c.IsDead).ToList();
 
-        if (alivePlayers.Count == 0)
-        {
-            Debug.Log("All players are dead. Game Over.");
+        if (BattleIsOver())
             return;
-        }
-
-        var aliveEnemies = enemyCharacters.Where(e => !e.IsDead).ToList();
-        if (aliveEnemies.Count == 0)
-        {
-            BattleEnded();
-            return;
-        }
 
         var target = alivePlayers[Random.Range(0, alivePlayers.Count)];
         int damage = current.Attack;
@@ -166,38 +240,7 @@ public class BattleManager : MonoBehaviour
         var currentView = GetCharacterView(current);
         var targetView = GetCharacterView(target);
 
-        Vector3 cameraDirection = (
-            Camera.main.transform.position - targetView.transform.position
-        ).normalized;
-        Vector3 attackPos = targetView.transform.position + cameraDirection * 1f;
-
-        currentView.PerformAttackMove(
-            currentView.transform.position,
-            attackPosition.transform.position,
-            onAttack: () =>
-            {
-                target.TakeDamage(damage);
-                if (currentView != null)
-                {
-                    VisualEffectManager.Instance.ShowFloatingText(
-                        damage.ToString(),
-                        attackPos,
-                        Color.red
-                    );
-                    VisualEffectManager.Instance.PlayAnimation(currentView.Animator, "Attack");
-                }
-            },
-            onReturnComplete: () =>
-            {
-                if (characters.Where(c => c.IsPlayerControlled).All(c => c.IsDead))
-                {
-                    Debug.Log("Game Over!");
-                    return;
-                }
-
-                turnSystem.EndTurn();
-            }
-        );
+        AttackAction(currentView, target, targetView, damage, -1);
     }
 
     void BattleEnded()
@@ -220,6 +263,9 @@ public class BattleManager : MonoBehaviour
         character.ProcessEndOfTurnEffects();
         if (activeArrow != null)
             activeArrow.GetComponent<TurnIndicator>().RemoveTarget();
+
+        if (BattleIsOver())
+            return;
     }
 
     public void PlayerChoseAction()
@@ -227,18 +273,22 @@ public class BattleManager : MonoBehaviour
         turnSystem.EndTurn();
     }
 
-    public void PlayerChoseAttack(int damage)
+    public void AttackAction(
+        CharacterView currentView,
+        Character target,
+        CharacterView targetView,
+        int damage,
+        int direction = 1
+    )
     {
-        if (current == null)
-            return;
-
-        if (activeArrow != null)
-            activeArrow.GetComponent<TurnIndicator>().RemoveTarget();
-
-        var target = enemyCharacters.FirstOrDefault(e => !e.IsDead);
-
-        var currentView = GetCharacterView(current);
-        var targetView = GetCharacterView(target);
+        bool isCrit = false;
+        if (current != null && current.IsPlayerControlled)
+        {
+            isCrit = Random.value < current.CritChance;
+            Debug.Log(current.CritChance);
+            if (isCrit)
+                damage = Mathf.RoundToInt(damage * current.CritMultiplier);
+        }
 
         Vector3 cameraDirection = (
             Camera.main.transform.position - targetView.transform.position
@@ -248,17 +298,26 @@ public class BattleManager : MonoBehaviour
         currentView.PerformAttackMove(
             currentView.transform.position,
             attackPosition.transform.position,
-            onAttack: () =>
+            damage,
+            onAttack: (dmg, effectConfig) =>
             {
-                target.TakeDamage(damage);
+                target.TakeDamage(dmg);
                 if (currentView != null)
                 {
                     VisualEffectManager.Instance.ShowFloatingText(
-                        damage.ToString(),
+                        dmg.ToString(),
                         attackPos,
-                        Color.red
+                        isCrit ? Color.yellow : Color.red
                     );
-                    VisualEffectManager.Instance.PlayAnimation(currentView.Animator, "Attack");
+                    targetView.PerformHitReaction(targetView.transform.position, direction);
+                    var config = isCrit && currentView.AttackConfig != null && currentView.AttackConfig.criticalHitEffect != null
+                        ? currentView.AttackConfig.criticalHitEffect
+                        : effectConfig;
+                    VisualEffectManager.Instance.PlayAttackEffect(
+                        targetView.transform.position,
+                        currentView.transform.position,
+                        config
+                    );
                 }
             },
             onReturnComplete: () =>
@@ -274,17 +333,39 @@ public class BattleManager : MonoBehaviour
         );
     }
 
+    public void PlayerChoseAttack(int damage)
+    {
+        if (current == null)
+            return;
+
+        if (activeArrow != null)
+            activeArrow.GetComponent<TurnIndicator>().RemoveTarget();
+
+        var target = enemyCharacters.FirstOrDefault(e => !e.IsDead);
+
+        var currentView = GetCharacterView(current);
+        var targetView = GetCharacterView(target);
+
+        AttackAction(currentView, target, targetView, damage, 1);
+    }
+
     public void PlayerChoseItem(ItemAction item)
     {
         if (current == null || !current.IsPlayerControlled)
             return;
 
-        if (item.targetType == ItemTargetType.Self)
-        {
-            item.Apply(current);
-            turnSystem.EndTurn();
+        if (item.targetType != ItemTargetType.Self)
             return;
-        }
+
+        var (amount, success) = item.Apply(current);
+        var currentView = GetCharacterView(current);
+        Vector3 cameraDirection = (
+            Camera.main.transform.position - currentView.transform.position
+        ).normalized;
+        Vector3 numberPos = currentView.transform.position + cameraDirection * 1f;
+        VisualEffectManager.Instance.ShowFloatingText(amount.ToString(), numberPos, Color.green);
+        VisualEffectManager.Instance.PlayHealEffect(currentView.transform.position);
+        turnSystem.EndTurn();
 
         // var target = enemyCharacters.FirstOrDefault(e => !e.IsDead);
         // item.Apply(target);

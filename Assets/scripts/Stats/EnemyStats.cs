@@ -11,5 +11,7 @@ public class EnemyStats : ScriptableObject
     public int SpecialDefense;
     public int Defense;
     public int Speed;
+    public int Luck = 5;
     public int XPReward;
+    public GameObject prefab;
 }

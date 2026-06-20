@@ -56,6 +56,7 @@ public class GameStateManager : MonoBehaviour
                     specialAttack = c.SpecialAttack,
                     specialDefense = c.SpecialDefense,
                     speed = c.Speed,
+                    luck = c.Luck,
                     unlockedActionNames = new List<string>(),
                 }
             );
