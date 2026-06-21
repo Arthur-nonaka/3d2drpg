@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class VisualEffectManager : MonoBehaviour
@@ -22,6 +23,9 @@ public class VisualEffectManager : MonoBehaviour
     [SerializeField]
     private AudioClip HealSound;
 
+    [SerializeField]
+    private RectTransform canvasTransform;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -30,23 +34,45 @@ public class VisualEffectManager : MonoBehaviour
             return;
         }
         Instance = this;
+
+        if (canvasTransform == null)
+        {
+            var canvas = GameObject.Find("Canvas");
+            if (canvas != null)
+                canvasTransform = canvas.GetComponent<RectTransform>();
+        }
     }
 
-    public void PlayAttackEffect(Vector3 position, Vector3 sourcePosition, HitEffectConfig config = null)
+    public void PlayAttackEffect(
+        Vector3 position,
+        Vector3 sourcePosition,
+        bool isCritical = false,
+        HitEffectConfig config = null
+    )
     {
-        var prefab = config != null && config.prefabOverride != null ? config.prefabOverride : hitEffectPrefab;
+        var prefab =
+            config != null && config.prefabOverride != null
+                ? config.prefabOverride
+                : hitEffectPrefab;
         if (prefab != null)
             SpawnEffect(prefab, position, config);
 
-        if (attackSound != null)
+        if (!isCritical)
             SoundManager.Instance.PlaySFX(attackSound);
+        else
+            SoundManager.Instance.PlaySFX(criticalAttackSound);
     }
 
-    public void PlayCriticalAttackEffect(Vector3 position, Vector3 sourcePosition, HitEffectConfig config = null)
+    public void PlayCriticalAttackEffect(
+        Vector3 position,
+        Vector3 sourcePosition,
+        HitEffectConfig config = null
+    )
     {
-        var prefab = config != null && config.prefabOverride != null
-            ? config.prefabOverride
-            : criticalHitEffectPrefab != null ? criticalHitEffectPrefab : hitEffectPrefab;
+        var prefab =
+            config != null && config.prefabOverride != null ? config.prefabOverride
+            : criticalHitEffectPrefab != null ? criticalHitEffectPrefab
+            : hitEffectPrefab;
         if (prefab != null)
             SpawnEffect(prefab, position, config);
 
@@ -57,7 +83,8 @@ public class VisualEffectManager : MonoBehaviour
     private void SpawnEffect(GameObject prefab, Vector3 position, HitEffectConfig config)
     {
         Vector3 offset = config != null ? config.positionOffset : Vector3.zero;
-        Quaternion rotation = config != null ? Quaternion.Euler(config.rotation) : Quaternion.identity;
+        Quaternion rotation =
+            config != null ? Quaternion.Euler(config.rotation) : Quaternion.identity;
         Vector3 scale = config != null ? config.scale : Vector3.one;
 
         var instance = Instantiate(prefab, position + offset, rotation);
@@ -81,13 +108,20 @@ public class VisualEffectManager : MonoBehaviour
 
     public void ShowFloatingText(string text, Vector3 position, Color color)
     {
+        if (canvasTransform == null) return;
+
+        Vector2 screenPos = Camera.main.WorldToScreenPoint(position);
+        Vector2 anchoredPos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            canvasTransform, screenPos, null, out anchoredPos
+        );
+
+        GameObject floatingText;
         if (floatingTextPrefab != null)
         {
-            GameObject floatingText = Instantiate(
-                floatingTextPrefab,
-                position,
-                Quaternion.identity
-            );
+            floatingText = Instantiate(floatingTextPrefab, canvasTransform);
+            var rt = floatingText.GetComponent<RectTransform>();
+            rt.anchoredPosition = anchoredPos;
             floatingText.GetComponent<FloatingText>().ShowNumber(int.Parse(text), color);
         }
     }

@@ -11,7 +11,7 @@ public class Billboard : MonoBehaviour
             x = 0,
             y = cameraRotation.y,
             z = 0,
-            w = transform.rotation.w
+            w = transform.rotation.w,
         };
     }
 }

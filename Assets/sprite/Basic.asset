@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AttackConfig
   approachDuration: 0.6
   returnDuration: 0.4
-  knockbackDistance: 1
+  knockbackDistance: 0.5
   approachEase: 1
   returnEase: 1
+  hitEffect: {fileID: 0}
+  criticalHitEffect: {fileID: 0}

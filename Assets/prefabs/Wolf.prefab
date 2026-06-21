@@ -32,8 +32,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.2, z: 0}
   m_LocalScale: {x: 7.35, y: 7.35, z: 7.35}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6951444442005328218}
+  m_Children: []
   m_Father: {fileID: 524900993273533687}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1360585522799476294
@@ -172,43 +171,44 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2707257772545065712}
+  - {fileID: 2970439032260572057}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4207828130056507846
+--- !u!1001 &8296851040085865221
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2707257772545065712}
+    m_TransformParent: {fileID: 524900993273533687}
     m_Modifications:
-    - target: {fileID: 4748748681334909172, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4
+    - target: {fileID: 4200487575502118332, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
+      propertyPath: offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200487575502118332, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
+      propertyPath: barSize.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200487575502118332, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
+      propertyPath: barSize.y
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5898603231879303320, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
       propertyPath: m_Name
       value: EnemyHealthBar
       objectReference: {fileID: 0}
-    - target: {fileID: 6354873290365509896, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.76059604
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354873290365509896, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6493425952976879772, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6493425952976879772, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6493425952976879772, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6493425952976879772, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -216,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6493425952976879772, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.217
+      value: 2.68
       objectReference: {fileID: 0}
     - target: {fileID: 6493425952976879772, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -254,17 +254,13 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8350909239877525477, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
---- !u!4 &6951444442005328218 stripped
+--- !u!4 &2970439032260572057 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6493425952976879772, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
-  m_PrefabInstance: {fileID: 4207828130056507846}
+  m_PrefabInstance: {fileID: 8296851040085865221}
   m_PrefabAsset: {fileID: 0}

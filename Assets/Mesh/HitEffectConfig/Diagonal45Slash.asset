@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Diagonal45Slash
   m_EditorClassIdentifier: Assembly-CSharp::HitEffectConfig
   prefabOverride: {fileID: 2083691266087474115, guid: 39080e784137d374d8fe903da3a95473, type: 3}
-  scale: {x: 1, y: 1, z: 1}
-  rotation: {x: 45, y: 0, z: 20}
+  scale: {x: 2, y: 2, z: 2}
+  rotation: {x: 60, y: 0, z: 20}
   positionOffset: {x: 0, y: 0, z: 0}

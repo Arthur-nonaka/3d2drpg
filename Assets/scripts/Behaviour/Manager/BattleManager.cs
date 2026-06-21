@@ -125,7 +125,8 @@ public class BattleManager : MonoBehaviour
                     character.Name,
                     enemySpawnPoints[i].position
                 );
-                var HealthBar = view.GetComponentInChildren<EnemyHealthBar>();
+                var HealthBar = view.transform.parent.GetComponentInChildren<EnemyHealthBar>();
+
                 character.OnHealthChanged += (hp, maxHp) =>
                 {
                     float fillAmount = (float)hp / maxHp;
@@ -284,8 +285,8 @@ public class BattleManager : MonoBehaviour
         bool isCrit = false;
         if (current != null && current.IsPlayerControlled)
         {
-            isCrit = Random.value < current.CritChance;
-            Debug.Log(current.CritChance);
+            float value = Random.value;
+            isCrit = value < current.CritChance;
             if (isCrit)
                 damage = Mathf.RoundToInt(damage * current.CritMultiplier);
         }
@@ -310,12 +311,11 @@ public class BattleManager : MonoBehaviour
                         isCrit ? Color.yellow : Color.red
                     );
                     targetView.PerformHitReaction(targetView.transform.position, direction);
-                    var config = isCrit && currentView.AttackConfig != null && currentView.AttackConfig.criticalHitEffect != null
-                        ? currentView.AttackConfig.criticalHitEffect
-                        : effectConfig;
+                    var config = effectConfig;
                     VisualEffectManager.Instance.PlayAttackEffect(
                         targetView.transform.position,
                         currentView.transform.position,
+                        isCrit,
                         config
                     );
                 }
