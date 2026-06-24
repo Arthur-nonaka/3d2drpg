@@ -108,18 +108,23 @@ public class VisualEffectManager : MonoBehaviour
 
     public void ShowFloatingText(string text, Vector3 position, Color color)
     {
-        if (canvasTransform == null) return;
+        if (canvasTransform == null)
+            return;
 
         Vector2 screenPos = Camera.main.WorldToScreenPoint(position);
         Vector2 anchoredPos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            canvasTransform, screenPos, null, out anchoredPos
+            canvasTransform,
+            screenPos,
+            null,
+            out anchoredPos
         );
 
         GameObject floatingText;
         if (floatingTextPrefab != null)
         {
             floatingText = Instantiate(floatingTextPrefab, canvasTransform);
+            Debug.Log("teste");
             var rt = floatingText.GetComponent<RectTransform>();
             rt.anchoredPosition = anchoredPos;
             floatingText.GetComponent<FloatingText>().ShowNumber(int.Parse(text), color);

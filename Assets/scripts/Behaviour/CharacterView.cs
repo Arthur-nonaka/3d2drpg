@@ -18,6 +18,8 @@ public class CharacterView : MonoBehaviour
     private bool attackEnded;
 
     private SpriteRenderer spriteRenderer;
+    public Sprite Sprite => spriteRenderer?.sprite;
+    public Sprite DefaultSprite { get; private set; }
     private Material originalMaterial;
 
     void Awake()
@@ -27,7 +29,10 @@ public class CharacterView : MonoBehaviour
 
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         if (spriteRenderer != null)
+        {
             originalMaterial = spriteRenderer.sharedMaterial;
+            DefaultSprite = spriteRenderer.sprite;
+        }
     }
 
     public void PerformAttackMove(

@@ -143,6 +143,7 @@ public class BattleManager : MonoBehaviour
         turnSystem = new TurnSystem(allCharacters);
 
         turnSystem.OnTurnStarted += HandleTurnStart;
+        turnSystem.OnTurnOrderUpdated += HandleTurnOrderUpdated;
         turnSystem.OnTurnEnded += HandleTurnEnd;
         turnSystem.StartTurn();
     }
@@ -158,6 +159,11 @@ public class BattleManager : MonoBehaviour
         if (view != null)
             view.gameObject.name = characterName;
         return view;
+    }
+
+    void HandleTurnOrderUpdated(Character[] turnOrder)
+    {
+        UIManager.Instance.UpdateOrderUI(turnOrder);
     }
 
     void HandleTurnStart(Character character)

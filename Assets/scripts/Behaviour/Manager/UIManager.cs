@@ -24,6 +24,13 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Image specialBarImage;
 
+    [Header("Order UI")]
+    [SerializeField]
+    private GameObject orderUIContainer;
+
+    [SerializeField]
+    private GameObject orderUIPrefab;
+
     public static UIManager Instance { get; private set; }
 
     private void Awake()
@@ -44,6 +51,27 @@ public class UIManager : MonoBehaviour
             specialButton.interactable = interactable;
         if (useItemButton != null)
             useItemButton.interactable = interactable;
+    }
+
+    public void UpdateOrderUI(Character[] turnOrder)
+    {
+        foreach (Transform child in orderUIContainer.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (var character in turnOrder)
+        {
+            var orderUI = Instantiate(orderUIPrefab, orderUIContainer.transform);
+            var images = orderUI.GetComponentsInChildren<Image>();
+            images[0].color = character.IsPlayerControlled
+                ? new Color(0, 0, 1, 0.2f)
+                : new Color(1, 0, 0, 0.2f);
+            images[1].preserveAspect = true;
+            var view = BattleManager.Instance.characterViews.Find(v => v.name == character.Name);
+            if (view != null)
+                images[1].sprite = view.DefaultSprite;
+        }
     }
 
     public void OnAttackButtonPressed()
