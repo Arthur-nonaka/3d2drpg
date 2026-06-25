@@ -1,4 +1,6 @@
-using System;
+using System.Collections.Generic;
+using System.Linq;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,6 +33,18 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject orderUIPrefab;
 
+    [SerializeField]
+    private GameObject SelectedImage;
+
+    [SerializeField]
+    private float slotStep = 140f;
+
+    [SerializeField]
+    private float slideDuration = 0.3f;
+
+    private Queue<GameObject> freeSlots = new Queue<GameObject>();
+    private bool layoutDisabled;
+
     public static UIManager Instance { get; private set; }
 
     private void Awake()
@@ -41,6 +55,38 @@ public class UIManager : MonoBehaviour
             return;
         }
         Instance = this;
+        var rt = SelectedImage.GetComponent<RectTransform>();
+        int pixelSteps = 3;
+        float stepDuration = 0.3f;
+        float interCycleDelay = 1.3f;
+
+        Sequence seq = DOTween.Sequence();
+        seq.Append(
+            DOVirtual.Float(
+                0,
+                pixelSteps,
+                stepDuration,
+                v =>
+                {
+                    float t = Mathf.Floor(v) / pixelSteps;
+                    rt.localScale = Vector3.one * Mathf.Lerp(1f, 0.8f, t);
+                }
+            )
+        );
+        seq.Append(
+            DOVirtual.Float(
+                pixelSteps,
+                0,
+                stepDuration,
+                v =>
+                {
+                    float t = Mathf.Floor(v) / pixelSteps;
+                    rt.localScale = Vector3.one * Mathf.Lerp(1f, 0.8f, t);
+                }
+            )
+        );
+        seq.AppendInterval(interCycleDelay);
+        seq.SetLoops(-1, LoopType.Restart);
     }
 
     public void SetButtonInteractable(bool interactable)
@@ -55,23 +101,68 @@ public class UIManager : MonoBehaviour
 
     public void UpdateOrderUI(Character[] turnOrder)
     {
-        foreach (Transform child in orderUIContainer.transform)
+        if (freeSlots.Count < 1)
         {
-            Destroy(child.gameObject);
+            foreach (var c in turnOrder)
+                freeSlots.Enqueue(InstantiateOrder(c));
+            PositionAll(0f);
+            return;
         }
 
-        foreach (var character in turnOrder)
+        float rightmostX = freeSlots.Last().GetComponent<RectTransform>().anchoredPosition.x;
+
+        var exitSlot = freeSlots.Dequeue();
+        var exitRt = exitSlot.GetComponent<RectTransform>();
+        exitRt.DOKill();
+        exitRt
+            .DOAnchorPosX(exitRt.anchoredPosition.x - slotStep, slideDuration)
+            .SetEase(Ease.Linear)
+            .OnComplete(() => Destroy(exitSlot));
+
+        foreach (var slot in freeSlots)
         {
-            var orderUI = Instantiate(orderUIPrefab, orderUIContainer.transform);
-            var images = orderUI.GetComponentsInChildren<Image>();
-            images[0].color = character.IsPlayerControlled
-                ? new Color(0, 0, 1, 0.2f)
-                : new Color(1, 0, 0, 0.2f);
-            images[1].preserveAspect = true;
-            var view = BattleManager.Instance.characterViews.Find(v => v.name == character.Name);
-            if (view != null)
-                images[1].sprite = view.DefaultSprite;
+            var rt = slot.GetComponent<RectTransform>();
+            rt.DOKill();
+            rt.DOAnchorPosX(rt.anchoredPosition.x - slotStep, slideDuration).SetEase(Ease.Linear);
         }
+
+        var newSlot = InstantiateOrder(turnOrder[turnOrder.Length - 1]);
+        var newRt = newSlot.GetComponent<RectTransform>();
+        newRt.anchoredPosition = new Vector2(rightmostX + slotStep, newRt.anchoredPosition.y);
+        newRt.DOAnchorPosX(rightmostX, slideDuration).SetEase(Ease.Linear);
+        freeSlots.Enqueue(newSlot);
+    }
+
+    private void PositionAll(float duration)
+    {
+        int count = freeSlots.Count;
+        float totalWidth = (count - 1) * slotStep;
+        float startX = -totalWidth / 2f;
+
+        var slots = freeSlots.ToArray();
+        for (int i = 0; i < count; i++)
+        {
+            var rt = slots[i].GetComponent<RectTransform>();
+            float targetX = startX + i * slotStep;
+            if (duration > 0f)
+                rt.DOAnchorPosX(targetX, duration).SetEase(Ease.Linear);
+            else
+                rt.anchoredPosition = new Vector2(targetX, rt.anchoredPosition.y);
+        }
+    }
+
+    GameObject InstantiateOrder(Character character)
+    {
+        GameObject order = Instantiate(orderUIPrefab, orderUIContainer.transform);
+        var images = order.GetComponentsInChildren<Image>();
+        images[0].color = character.IsPlayerControlled
+            ? new Color(0, 0, 1, 0.2f)
+            : new Color(1, 0, 0, 0.2f);
+        images[1].preserveAspect = true;
+        var view = BattleManager.Instance.characterViews.Find(v => v.name == character.Name);
+        if (view != null)
+            images[1].sprite = view.DefaultSprite;
+        return order;
     }
 
     public void OnAttackButtonPressed()
@@ -91,17 +182,6 @@ public class UIManager : MonoBehaviour
 
     public void OnButtonPressed(ButtonType type)
     {
-        // switch (type) {
-        // case ButtonType.Attack:
-        //     BattleManager.Instance.PlayerChoseAttack();
-        //     break;
-        //     case ButtonType.Defend:
-        //         BattleManager.Instance.PlayerChoseDefend();
-        //         break;
-        //     case ButtonType.UseItem:
-        //         BattleManager.Instance.PlayerChoseUseItem();
-        //         break;
-        // }
         SetButtonInteractable(false);
     }
 

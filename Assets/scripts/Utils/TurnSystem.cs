@@ -12,7 +12,7 @@ public class TurnSystem
 
     public TurnSystem(List<Character> characters)
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 5; i++)
         {
             foreach (var c in characters)
             {
@@ -31,7 +31,7 @@ public class TurnSystem
         StartTurn();
     }
 
-    public Character[] GetTurnOrder() => turnOrder.ToArray().Take(5).ToArray();
+    public Character[] GetTurnOrder() => turnOrder.ToArray().Take(7).ToArray();
 
     public void StartTurn()
     {

@@ -46,13 +46,17 @@ public class FloatingText : MonoBehaviour
                     digitAppearTime
                 )
                 .SetDelay(delay);
+            // digitGO
+            //     .transform.DOScale(Vector3.one * 1.2f, digitAppearTime)
+            //     .SetDelay(delay)
+            //     .OnComplete(() => digitGO.transform.DOScale(Vector3.one, 0.1f));
             digitGO
-                .transform.DOScale(Vector3.one * 1.2f, digitAppearTime)
-                .SetDelay(delay)
-                .OnComplete(() => digitGO.transform.DOScale(Vector3.one, 0.1f));
+                .transform.DOMoveY(digitGO.transform.position.y + 70f, digitAppearTime)
+                .SetEase(Ease.OutBack)
+                .SetDelay(delay);
         }
 
-        transform.DOMoveY(transform.position.y + 1.5f, 1.3f).SetEase(Ease.InOutBack);
+        // transform.DOMoveY(transform.position.y + 1.5f, 1.3f).SetEase(Ease.InOutBack);
         Destroy(gameObject, 1.3f);
     }
 

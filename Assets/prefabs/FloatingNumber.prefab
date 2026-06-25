@@ -63,8 +63,8 @@ MonoBehaviour:
   digitContainer: {fileID: 6075430001427481069}
   digitPrefab: {fileID: 8494031056052317188, guid: 1c9d7896155c34d46adfd6a544456d73, type: 3}
   digitSpacing: 45
-  initialDelay: 1
-  digitAppearTime: 2
+  initialDelay: 0.1
+  digitAppearTime: 1
 --- !u!222 &2222222222222222222
 CanvasRenderer:
   m_ObjectHideFlags: 0
