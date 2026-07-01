@@ -65,17 +65,26 @@ public class PlayerHealthUI : MonoBehaviour
 
         if (delayedFill != null)
         {
-            delayedFill.DOFillAmount(fill, delayedDuration)
+            delayedFill
+                .DOFillAmount(fill, delayedDuration)
                 .SetDelay(delayBeforeDrain)
                 .SetEase(Ease.OutCubic);
         }
 
         int startHP = lastDisplayedHP;
         lastDisplayedHP = current;
-        DOVirtual.Int(startHP, current, smoothDuration, v =>
-        {
-            healthText.text = $"{v} / {max} Life";
-        }).SetId("hpTextTween").SetEase(Ease.OutCubic);
+        DOVirtual
+            .Int(
+                startHP,
+                current,
+                smoothDuration,
+                v =>
+                {
+                    healthText.text = $"{v} / {max} Life";
+                }
+            )
+            .SetId("hpTextTween")
+            .SetEase(Ease.OutCubic);
     }
 
     public void UpdateExpDisplay()
@@ -89,7 +98,8 @@ public class PlayerHealthUI : MonoBehaviour
             expBarFill.DOFillAmount(fill, 0.3f).SetEase(Ease.OutCubic);
         }
 
-        ExpText.text = $"Level {playerStats.level} - {playerStats.Experience} / {playerStats.ExperienceToNextLevel} XP";
+        ExpText.text =
+            $"Level {playerStats.level} - {playerStats.Experience} / {playerStats.ExperienceToNextLevel} XP";
     }
 
     private Color GetHealthColor(float fill)

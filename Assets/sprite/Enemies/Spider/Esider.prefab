@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterView
   attackConfig: {fileID: 11400000, guid: e77a1d8affc0ee148ade4d998b080fe4, type: 2}
+  outlineMaterial: {fileID: 0}
 --- !u!114 &2642672950096975854
 MonoBehaviour:
   m_ObjectHideFlags: 0

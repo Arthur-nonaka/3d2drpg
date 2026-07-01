@@ -421,7 +421,9 @@ public class BattleManager : MonoBehaviour
 
         if (activeArrow == null)
             activeArrow = Instantiate(turnArrow);
-        activeArrow.GetComponent<TurnIndicator>().SetTarget(GetCharacterView(currentTarget).transform);
+        activeArrow
+            .GetComponent<TurnIndicator>()
+            .SetTarget(GetCharacterView(currentTarget).transform);
     }
 
     public void PlayerChoseAttack(int damage)
@@ -497,9 +499,7 @@ public class BattleManager : MonoBehaviour
         if (!isTargeting || view == null)
             return;
 
-        var enemy = enemyCharacters.FirstOrDefault(e =>
-            !e.IsDead && GetCharacterView(e) == view
-        );
+        var enemy = enemyCharacters.FirstOrDefault(e => !e.IsDead && GetCharacterView(e) == view);
         if (enemy == null || enemy == currentTarget)
             return;
 
@@ -509,7 +509,5 @@ public class BattleManager : MonoBehaviour
         activeArrow.GetComponent<TurnIndicator>().SetTarget(view.transform);
     }
 
-    public void OnUnhoverEnemy()
-    {
-    }
+    public void OnUnhoverEnemy() { }
 }
