@@ -10,6 +10,7 @@ public class AttackConfig : ScriptableObject
     public float knockbackDistance = 1f;
     public Ease approachEase = Ease.OutBack;
     public Ease returnEase = Ease.Linear;
+    public bool useWalk = true;
 
     [Header("VFX")]
     public HitEffectConfig hitEffect;

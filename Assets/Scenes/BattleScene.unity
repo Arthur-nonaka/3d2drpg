@@ -4358,7 +4358,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5c5166f953a76ab458d13fb1377e5c72, type: 2}
   playerHealthUI: {fileID: 1142585418}
   enemyStats:
-  - {fileID: 11400000, guid: d14dd1ef6388406e84e7df65bf282318, type: 2}
+  - {fileID: 11400000, guid: 5367620bc05c7bb4db3637a2b0609295, type: 2}
+  - {fileID: 11400000, guid: 5367620bc05c7bb4db3637a2b0609295, type: 2}
   playerSpawnPoints:
   - {fileID: 3000000001}
   enemySpawnPoints:

@@ -32,8 +32,6 @@ public class SpecialBarManager
         if (!CanUse(cost))
             return;
 
-        Debug.Log($"Using {cost} charge from Special Bar.");
-
         currentValue = Mathf.Clamp(currentValue - cost, 0f, maxValue);
         UIManager.Instance.UpdateSpecialBar(NormalizedValue);
     }

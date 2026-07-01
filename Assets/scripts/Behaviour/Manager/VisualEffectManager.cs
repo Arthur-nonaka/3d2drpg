@@ -124,7 +124,6 @@ public class VisualEffectManager : MonoBehaviour
         if (floatingTextPrefab != null)
         {
             floatingText = Instantiate(floatingTextPrefab, canvasTransform);
-            Debug.Log("teste");
             var rt = floatingText.GetComponent<RectTransform>();
             rt.anchoredPosition = anchoredPos;
             floatingText.GetComponent<FloatingText>().ShowNumber(int.Parse(text), color);

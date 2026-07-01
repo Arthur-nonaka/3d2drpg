@@ -49,40 +49,47 @@ public class CharacterView : MonoBehaviour
         this.originalPosition = originalPosition;
         attackEnded = false;
 
-        Vector3 moveDirection = (targetPosition - originalPosition).normalized;
-
-        cameraForward = Camera.main.transform.forward;
-        cameraRight = Camera.main.transform.right;
-        cameraForward.y = 0;
-        cameraRight.y = 0;
-        cameraForward.Normalize();
-        cameraRight.Normalize();
-
-        float moveX = Vector3.Dot(moveDirection, cameraRight);
-        float moveY = Vector3.Dot(moveDirection, cameraForward);
-
-        Animator.SetFloat("MoveX", moveX);
-        Animator.SetFloat("MoveY", moveY);
-        Animator.SetBool("IsWalking", true);
-
         var config = attackConfig;
 
-        Sequence attackSequence = DOTween.Sequence();
-        attackSequence
-            .Append(
-                transform
-                    .DOMove(
-                        targetPosition + (Vector3.up * transform.position.y),
-                        config.approachDuration
-                    )
-                    .SetEase(config.approachEase)
-            )
-            .AppendCallback(() =>
-            {
-                Animator.SetBool("IsWalking", false);
-                Animator.SetTrigger("Attack");
-                Invoke(nameof(SafeEndAttack), 2f);
-            });
+        if (config.useWalk)
+        {
+            Vector3 moveDirection = (targetPosition - originalPosition).normalized;
+
+            cameraForward = Camera.main.transform.forward;
+            cameraRight = Camera.main.transform.right;
+            cameraForward.y = 0;
+            cameraRight.y = 0;
+            cameraForward.Normalize();
+            cameraRight.Normalize();
+
+            float moveX = Vector3.Dot(moveDirection, cameraRight);
+            float moveY = Vector3.Dot(moveDirection, cameraForward);
+
+            Animator.SetFloat("MoveX", moveX);
+            Animator.SetFloat("MoveY", moveY);
+            Animator.SetBool("IsWalking", true);
+            Sequence attackSequence = DOTween.Sequence();
+            attackSequence
+                .Append(
+                    transform
+                        .DOMove(
+                            targetPosition + (Vector3.up * transform.position.y),
+                            config.approachDuration
+                        )
+                        .SetEase(config.approachEase)
+                )
+                .AppendCallback(() =>
+                {
+                    Animator.SetBool("IsWalking", false);
+                    Animator.SetTrigger("Attack");
+                    Invoke(nameof(SafeEndAttack), 2f);
+                });
+            return;
+        }
+        else
+        {
+            Animator.SetTrigger("Attack");
+        }
     }
 
     public void OnAttackHit(HitEffectConfig config)

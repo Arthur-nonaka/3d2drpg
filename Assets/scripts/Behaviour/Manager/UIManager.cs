@@ -156,8 +156,8 @@ public class UIManager : MonoBehaviour
         GameObject order = Instantiate(orderUIPrefab, orderUIContainer.transform);
         var images = order.GetComponentsInChildren<Image>();
         images[0].color = character.IsPlayerControlled
-            ? new Color(0, 0, 1, 0.2f)
-            : new Color(1, 0, 0, 0.2f);
+            ? new Color(0, 0, 1, 0.35f)
+            : new Color(1, 0, 0, 0.35f);
         images[1].preserveAspect = true;
         var view = BattleManager.Instance.characterViews.Find(v => v.name == character.Name);
         if (view != null)

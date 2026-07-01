@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 627599072776324439}
   - component: {fileID: 5956614035270817361}
   - component: {fileID: 3095102119996525331}
+  - component: {fileID: 1333918995568529576}
   m_Layer: 0
   m_Name: CLOUD
   m_TagString: Untagged
@@ -173,6 +174,21 @@ MonoBehaviour:
   m_labelHash: 2.3432027e-18
   m_SpriteKey: 0
   m_SpriteHash: 150813191
+--- !u!114 &1333918995568529576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277091619381138380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35ae97ac7f687de4ebd434870d745745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IdleAnimationRandomizer
+  minPause: 1
+  maxPause: 5
+  idleStateName: Idle
 --- !u!1 &8656027468742327976
 GameObject:
   m_ObjectHideFlags: 0
