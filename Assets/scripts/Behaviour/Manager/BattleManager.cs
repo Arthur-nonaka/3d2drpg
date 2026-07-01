@@ -37,6 +37,11 @@ public class BattleManager : MonoBehaviour
     private GameObject turnArrow;
     private GameObject activeArrow;
 
+    private bool isTargeting = false;
+    private int pendingDamage;
+    private Character currentTarget;
+    private int targetingFrame;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -45,6 +50,65 @@ public class BattleManager : MonoBehaviour
             return;
         }
         Instance = this;
+    }
+
+    void Update()
+    {
+        if (!isTargeting)
+            return;
+
+        if (Time.frameCount == targetingFrame)
+            return;
+
+        var aliveEnemies = enemyCharacters.Where(e => !e.IsDead).ToList();
+        if (aliveEnemies.Count == 0)
+        {
+            isTargeting = false;
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            GetCharacterView(currentTarget)?.SetTargeted(false);
+            int index = aliveEnemies.IndexOf(currentTarget);
+            index = (index - 1 + aliveEnemies.Count) % aliveEnemies.Count;
+            currentTarget = aliveEnemies[index];
+            GetCharacterView(currentTarget)?.SetTargeted(true);
+            activeArrow
+                .GetComponent<TurnIndicator>()
+                .SetTarget(GetCharacterView(currentTarget).transform);
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            GetCharacterView(currentTarget)?.SetTargeted(false);
+            int index = aliveEnemies.IndexOf(currentTarget);
+            index = (index + 1) % aliveEnemies.Count;
+            currentTarget = aliveEnemies[index];
+            GetCharacterView(currentTarget)?.SetTargeted(true);
+            activeArrow
+                .GetComponent<TurnIndicator>()
+                .SetTarget(GetCharacterView(currentTarget).transform);
+        }
+        else if (Input.GetKeyDown(KeyCode.Z))
+        {
+            isTargeting = false;
+            GetCharacterView(currentTarget)?.SetTargeted(false);
+            if (activeArrow != null)
+                activeArrow.GetComponent<TurnIndicator>().RemoveTarget();
+
+            var currentView = GetCharacterView(current);
+            var targetView = GetCharacterView(currentTarget);
+            AttackAction(currentView, currentTarget, targetView, pendingDamage, 1);
+        }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            isTargeting = false;
+            GetCharacterView(currentTarget)?.SetTargeted(false);
+            activeArrow
+                .GetComponent<TurnIndicator>()
+                .SetTarget(GetCharacterView(current).transform);
+            ShowPlayerActionMenu();
+        }
     }
 
     void Start()
@@ -339,6 +403,27 @@ public class BattleManager : MonoBehaviour
         );
     }
 
+    public void StartTargeting(int damage)
+    {
+        if (current == null || !current.IsPlayerControlled)
+            return;
+
+        var aliveEnemies = enemyCharacters.Where(e => !e.IsDead).ToList();
+        if (aliveEnemies.Count == 0)
+            return;
+
+        isTargeting = true;
+        pendingDamage = damage;
+        currentTarget = aliveEnemies[0];
+        targetingFrame = Time.frameCount;
+
+        GetCharacterView(currentTarget)?.SetTargeted(true);
+
+        if (activeArrow == null)
+            activeArrow = Instantiate(turnArrow);
+        activeArrow.GetComponent<TurnIndicator>().SetTarget(GetCharacterView(currentTarget).transform);
+    }
+
     public void PlayerChoseAttack(int damage)
     {
         if (current == null)
@@ -400,5 +485,31 @@ public class BattleManager : MonoBehaviour
     public Character GetCurrentCharacter()
     {
         return current;
+    }
+
+    public bool IsTargeting()
+    {
+        return isTargeting;
+    }
+
+    public void OnHoverEnemy(CharacterView view)
+    {
+        if (!isTargeting || view == null)
+            return;
+
+        var enemy = enemyCharacters.FirstOrDefault(e =>
+            !e.IsDead && GetCharacterView(e) == view
+        );
+        if (enemy == null || enemy == currentTarget)
+            return;
+
+        GetCharacterView(currentTarget)?.SetTargeted(false);
+        currentTarget = enemy;
+        GetCharacterView(currentTarget)?.SetTargeted(true);
+        activeArrow.GetComponent<TurnIndicator>().SetTarget(view.transform);
+    }
+
+    public void OnUnhoverEnemy()
+    {
     }
 }

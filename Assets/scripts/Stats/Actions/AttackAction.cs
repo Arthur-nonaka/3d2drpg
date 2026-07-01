@@ -78,6 +78,6 @@ public class AttackAction : ScriptableObject, IAction
                 character.Energy = 0;
         }
 
-        BattleManager.Instance.PlayerChoseAttack(damage);
+        BattleManager.Instance.StartTargeting(damage);
     }
 }

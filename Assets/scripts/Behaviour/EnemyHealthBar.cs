@@ -53,6 +53,8 @@ public class EnemyHealthBar : MonoBehaviour
         delayedRect = delayedFill != null ? delayedFill.GetComponent<RectTransform>() : null;
         background = instance.transform.Find("Background").GetComponent<Image>();
         bgRect = background.GetComponent<RectTransform>();
+
+        SetVisible(false);
     }
 
     private void LateUpdate()
@@ -73,6 +75,13 @@ public class EnemyHealthBar : MonoBehaviour
         fillRect.anchoredPosition = anchoredPos;
         if (delayedRect != null)
             delayedRect.anchoredPosition = anchoredPos;
+    }
+
+    public void SetVisible(bool visible)
+    {
+        if (bgRect != null) bgRect.gameObject.SetActive(visible);
+        if (fillRect != null) fillRect.gameObject.SetActive(visible);
+        if (delayedRect != null) delayedRect.gameObject.SetActive(visible);
     }
 
     public void UpdateHealthBar(float fillAmount)

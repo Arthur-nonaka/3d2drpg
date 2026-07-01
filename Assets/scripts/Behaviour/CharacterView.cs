@@ -22,6 +22,10 @@ public class CharacterView : MonoBehaviour
     public Sprite DefaultSprite { get; private set; }
     private Material originalMaterial;
 
+    [SerializeField]
+    private Material outlineMaterial;
+    private EnemyHealthBar healthBarRef;
+
     void Awake()
     {
         Animator = GetComponent<Animator>();
@@ -33,6 +37,18 @@ public class CharacterView : MonoBehaviour
             originalMaterial = spriteRenderer.sharedMaterial;
             DefaultSprite = spriteRenderer.sprite;
         }
+
+        if (outlineMaterial == null)
+        {
+            var shader = Shader.Find("Custom/Outline");
+            if (shader != null)
+            {
+                outlineMaterial = new Material(shader);
+                outlineMaterial.SetColor("_OutlineColor", Color.white);
+            }
+        }
+
+        healthBarRef = transform.parent.GetComponentInChildren<EnemyHealthBar>();
     }
 
     public void PerformAttackMove(
@@ -169,6 +185,39 @@ public class CharacterView : MonoBehaviour
     public void PlayDeathAnimation()
     {
         Animator.SetBool("Dead", true);
+    }
+
+    public void SetTargeted(bool targeted)
+    {
+        if (spriteRenderer == null)
+            return;
+
+        if (targeted)
+        {
+            if (outlineMaterial != null && spriteRenderer.material != outlineMaterial)
+                spriteRenderer.material = outlineMaterial;
+            if (healthBarRef != null)
+                healthBarRef.SetVisible(true);
+        }
+        else
+        {
+            if (originalMaterial != null && spriteRenderer.material != originalMaterial)
+                spriteRenderer.material = originalMaterial;
+            if (healthBarRef != null)
+                healthBarRef.SetVisible(false);
+        }
+    }
+
+    void OnMouseEnter()
+    {
+        if (BattleManager.Instance != null)
+            BattleManager.Instance.OnHoverEnemy(this);
+    }
+
+    void OnMouseExit()
+    {
+        if (BattleManager.Instance != null)
+            BattleManager.Instance.OnUnhoverEnemy();
     }
 
     private void SafeEndAttack()
