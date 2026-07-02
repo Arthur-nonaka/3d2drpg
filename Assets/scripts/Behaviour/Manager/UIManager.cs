@@ -44,6 +44,7 @@ public class UIManager : MonoBehaviour
 
     private Queue<GameObject> freeSlots = new Queue<GameObject>();
     private bool layoutDisabled;
+    private Character[] currentOrder;
 
     public static UIManager Instance { get; private set; }
 
@@ -101,11 +102,14 @@ public class UIManager : MonoBehaviour
 
     public void UpdateOrderUI(Character[] turnOrder)
     {
+        currentOrder = turnOrder;
+
         if (freeSlots.Count < 1)
         {
             foreach (var c in turnOrder)
                 freeSlots.Enqueue(InstantiateOrder(c));
             PositionAll(0f);
+            UpdateSlotVisuals(turnOrder);
             return;
         }
 
@@ -131,6 +135,50 @@ public class UIManager : MonoBehaviour
         newRt.anchoredPosition = new Vector2(rightmostX + slotStep, newRt.anchoredPosition.y);
         newRt.DOAnchorPosX(rightmostX, slideDuration).SetEase(Ease.Linear);
         freeSlots.Enqueue(newSlot);
+
+        UpdateSlotVisuals(turnOrder);
+    }
+
+    public void RebuildOrderUI(Character[] turnOrder)
+    {
+        currentOrder = turnOrder;
+
+        foreach (var slot in freeSlots)
+            Destroy(slot);
+        freeSlots.Clear();
+
+        foreach (var c in turnOrder)
+            freeSlots.Enqueue(InstantiateOrder(c));
+        PositionAll(0f);
+        UpdateSlotVisuals(turnOrder);
+    }
+
+    public void RefreshSlotVisuals(Character[] turnOrder)
+    {
+        currentOrder = turnOrder;
+        UpdateSlotVisuals(turnOrder);
+    }
+
+    private void UpdateSlotVisuals(Character[] turnOrder)
+    {
+        var slots = freeSlots.ToArray();
+        for (int i = 0; i < slots.Length && i < turnOrder.Length; i++)
+        {
+            var character = turnOrder[i];
+            var images = slots[i].GetComponentsInChildren<Image>();
+            if (character.IsDead && character.IsPlayerControlled)
+            {
+                images[0].color = new Color(0.3f, 0.3f, 0.3f, 0.35f);
+                images[1].color = new Color(0.5f, 0.5f, 0.5f, 0.5f);
+            }
+            else
+            {
+                images[0].color = character.IsPlayerControlled
+                    ? new Color(0, 0, 1, 0.35f)
+                    : new Color(1, 0, 0, 0.35f);
+                images[1].color = Color.white;
+            }
+        }
     }
 
     private void PositionAll(float duration)
@@ -155,9 +203,17 @@ public class UIManager : MonoBehaviour
     {
         GameObject order = Instantiate(orderUIPrefab, orderUIContainer.transform);
         var images = order.GetComponentsInChildren<Image>();
-        images[0].color = character.IsPlayerControlled
-            ? new Color(0, 0, 1, 0.35f)
-            : new Color(1, 0, 0, 0.35f);
+        if (character.IsDead && character.IsPlayerControlled)
+        {
+            images[0].color = new Color(0.3f, 0.3f, 0.3f, 0.35f);
+            images[1].color = new Color(0.5f, 0.5f, 0.5f, 0.5f);
+        }
+        else
+        {
+            images[0].color = character.IsPlayerControlled
+                ? new Color(0, 0, 1, 0.35f)
+                : new Color(1, 0, 0, 0.35f);
+        }
         images[1].preserveAspect = true;
         var view = BattleManager.Instance.characterViews.Find(v => v.name == character.Name);
         if (view != null)

@@ -21,5 +21,5 @@ MonoBehaviour:
   Defense: 3
   Speed: 1
   Luck: 5
-  XPReward: 10
+  XPReward: 100
   prefab: {fileID: 1456353035083655734, guid: 5c2c8964bb4bdbf458ccc7c7d40df882, type: 3}

@@ -31,6 +31,11 @@ public class TurnSystem
         StartTurn();
     }
 
+    public void RemoveCharacter(Character character)
+    {
+        turnOrder = new Queue<Character>(turnOrder.Where(c => c != character));
+    }
+
     public Character[] GetTurnOrder() => turnOrder.ToArray().Take(7).ToArray();
 
     public void StartTurn()

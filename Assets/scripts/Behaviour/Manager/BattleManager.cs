@@ -168,7 +168,11 @@ public class BattleManager : MonoBehaviour
                     character.Name,
                     playerSpawnPoints[i].position
                 );
-                character.OnDeath += () => view.PlayDeathAnimation();
+                character.OnDeath += () =>
+                {
+                    view.PlayDeathAnimation();
+                    UIManager.Instance.RefreshSlotVisuals(turnSystem.GetTurnOrder());
+                };
                 characterViews.Add(view);
             }
         }
@@ -216,6 +220,8 @@ public class BattleManager : MonoBehaviour
                     capturedView.PlayDeathAnimation(() =>
                     {
                         characterViews.Remove(capturedView);
+                        turnSystem.RemoveCharacter(character);
+                        UIManager.Instance.RebuildOrderUI(turnSystem.GetTurnOrder());
                     });
                 characterViews.Add(view);
             }
