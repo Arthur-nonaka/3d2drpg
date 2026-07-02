@@ -9,7 +9,18 @@ public class Character
     public bool IsPlayerControlled { get; set; }
     public int MaxHP { get; set; }
     public int HP { get; set; }
-    public int Energy { get; set; }
+    public int MaxEnergy { get; set; }
+    private int energy;
+    public int Energy
+    {
+        get => energy;
+        set
+        {
+            if (energy == value) return;
+            energy = value;
+            OnEnergyChanged?.Invoke(energy, MaxEnergy);
+        }
+    }
     public int Speed { get; set; }
     public int Defense { get; set; }
     public int SpecialDefense { get; set; }
@@ -54,7 +65,8 @@ public class Character
         IsPlayerControlled = isPlayerControlled;
         MaxHP = maxHP;
         HP = hp;
-        Energy = energy;
+        MaxEnergy = energy;
+        this.energy = energy;
         Speed = speed;
         Defense = defense;
         SpecialDefense = specialDefense;
@@ -142,6 +154,7 @@ public class Character
     }
 
     public event Action<int, int> OnHealthChanged;
+    public event Action<int, int> OnEnergyChanged;
 
     private void NotifyHealthChanged()
     {

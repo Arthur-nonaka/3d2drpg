@@ -79,9 +79,12 @@ public class EnemyHealthBar : MonoBehaviour
 
     public void SetVisible(bool visible)
     {
-        if (bgRect != null) bgRect.gameObject.SetActive(visible);
-        if (fillRect != null) fillRect.gameObject.SetActive(visible);
-        if (delayedRect != null) delayedRect.gameObject.SetActive(visible);
+        if (bgRect != null)
+            bgRect.gameObject.SetActive(visible);
+        if (fillRect != null)
+            fillRect.gameObject.SetActive(visible);
+        if (delayedRect != null)
+            delayedRect.gameObject.SetActive(visible);
     }
 
     public void UpdateHealthBar(float fillAmount)

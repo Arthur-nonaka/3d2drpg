@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2813aa94c16ebb24aae5aba2f22fb275, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  Name: CLOUD
+  Name: Kael
   Health: 30
   Mana: 20
   Attack: 15

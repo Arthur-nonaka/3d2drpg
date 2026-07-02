@@ -191,6 +191,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4200487575502118332, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
+      propertyPath: offset.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200487575502118332, guid: d3ce23869b2dc2d4b9f6bc83dda0d7b6, type: 3}
       propertyPath: barSize.x
       value: 300
       objectReference: {fileID: 0}

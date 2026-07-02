@@ -16,7 +16,10 @@ public class BattleManager : MonoBehaviour
     private List<PlayerStats> playerStats;
 
     [SerializeField]
-    private PlayerHealthUI playerHealthUI;
+    private GameObject playerInfoPrefab;
+
+    [SerializeField]
+    private GameObject PlayerInfoContainer;
 
     [SerializeField]
     private List<EnemyStats> enemyStats;
@@ -144,7 +147,18 @@ public class BattleManager : MonoBehaviour
                 character = CharacterFactory.CreateFromPlayerStats(c);
             }
             characters.Add(character);
-            playerHealthUI.Initialize(character);
+
+            if (playerInfoPrefab != null)
+            {
+                var canvas = GameObject.Find("Canvas");
+                if (canvas != null)
+                {
+                    var info = Instantiate(playerInfoPrefab, PlayerInfoContainer.transform);
+                    var healthUI = info.GetComponent<PlayerHealthUI>();
+                    if (healthUI != null)
+                        healthUI.Initialize(character);
+                }
+            }
 
             if (c.prefab != null && i < playerSpawnPoints.Length)
             {

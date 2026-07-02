@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 338}
   m_MaxSize: {x: 10000, y: 10000}
@@ -229,7 +229,7 @@ MonoBehaviour:
   - {fileID: 18}
   - {fileID: 19}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1286,9 +1286,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 1.1666967, y: 2.9349885, z: -21.326841}
+    m_Target: {x: 709, y: 273.3612, z: 0}
     speed: 2
-    m_Value: {x: 1.1666967, y: 2.9349885, z: -21.326841}
+    m_Value: {x: 709, y: 273.3612, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1334,13 +1334,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.011996355, y: -0.0314854, z: 0.0003689906, w: -0.9994397}
+    m_Target: {x: -0.14925952, y: -0.04891933, z: 0.007384463, w: -0.9875717}
     speed: 2
-    m_Value: {x: -0.011996355, y: -0.0314854, z: 0.00036899062, w: -0.9994397}
+    m_Value: {x: -0.14925954, y: -0.04891933, z: 0.0073844637, w: -0.9875717}
   m_Size:
-    m_Target: 0.8660254
+    m_Target: 763.5167
     speed: 2
-    m_Value: 0.8660254
+    m_Value: 763.5167
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1526,7 +1526,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/sprite/Enemies/Spider
+    - Assets/prefabs
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1536,22 +1536,22 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/sprite/Enemies/Spider
+  - Assets/prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Projetos\3d2dRPG
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 177}
+    scrollPos: {x: 0, y: 79}
     m_SelectedIDs:
-    - m_Data: 61086
+    - m_Data: 54060
     m_LastClickedID:
-      m_Data: 61086
+      m_Data: 54060
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 53946
-    - m_Data: 53948
+    - m_Data: 53814
+    - m_Data: 53816
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1584,8 +1584,8 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 53946
-    - m_Data: 53948
+    - m_Data: 53814
+    - m_Data: 53816
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1612,9 +1612,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: []
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs:
+    - m_Data: 52760
+    m_LastClickedInstanceID: 52760
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 71080
     - m_Data: 48790
@@ -1833,7 +1834,9 @@ MonoBehaviour:
         m_Data: 0
       m_ExpandedIDs:
       - m_Data: -1348
-      - m_Data: 52362
+      - m_Data: 52304
+      - m_Data: 52742
+      - m_Data: 52760
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
