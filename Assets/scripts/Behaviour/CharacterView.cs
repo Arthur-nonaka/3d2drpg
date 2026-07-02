@@ -21,6 +21,7 @@ public class CharacterView : MonoBehaviour
     public Sprite Sprite => spriteRenderer?.sprite;
     public Sprite DefaultSprite { get; private set; }
     private Material originalMaterial;
+    private bool isDead;
 
     [SerializeField]
     private Material outlineMaterial;
@@ -182,9 +183,30 @@ public class CharacterView : MonoBehaviour
             .Append(transform.DOMove(originalPosition, 0.2f));
     }
 
-    public void PlayDeathAnimation()
+    public void PlayDeathAnimation(System.Action onComplete = null)
     {
+        if (isDead)
+            return;
+        isDead = true;
+
         Animator.SetBool("Dead", true);
+
+        float sinkDelay = 1f;
+        float sinkDuration = 1.2f;
+
+        transform
+            .root.DOMoveY(transform.root.position.y - 10f, sinkDuration)
+            .SetDelay(sinkDelay)
+            .SetEase(Ease.InQuad)
+            .OnComplete(() =>
+            {
+                if (this != null)
+                {
+                    var root = transform.root.gameObject;
+                    onComplete?.Invoke();
+                    Destroy(root);
+                }
+            });
     }
 
     public void SetTargeted(bool targeted)

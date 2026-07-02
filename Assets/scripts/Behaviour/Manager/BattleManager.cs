@@ -44,6 +44,7 @@ public class BattleManager : MonoBehaviour
     private int pendingDamage;
     private Character currentTarget;
     private int targetingFrame;
+    private CharacterView hoveredView;
 
     private void Awake()
     {
@@ -210,7 +211,12 @@ public class BattleManager : MonoBehaviour
                     float fillAmount = (float)hp / maxHp;
                     HealthBar.UpdateHealthBar(fillAmount);
                 };
-                character.OnDeath += () => view.PlayDeathAnimation();
+                CharacterView capturedView = view;
+                character.OnDeath += () =>
+                    capturedView.PlayDeathAnimation(() =>
+                    {
+                        characterViews.Remove(capturedView);
+                    });
                 characterViews.Add(view);
             }
         }
@@ -510,18 +516,32 @@ public class BattleManager : MonoBehaviour
 
     public void OnHoverEnemy(CharacterView view)
     {
-        if (!isTargeting || view == null)
+        if (view == null)
             return;
 
         var enemy = enemyCharacters.FirstOrDefault(e => !e.IsDead && GetCharacterView(e) == view);
-        if (enemy == null || enemy == currentTarget)
+        if (enemy == null)
             return;
 
-        GetCharacterView(currentTarget)?.SetTargeted(false);
-        currentTarget = enemy;
-        GetCharacterView(currentTarget)?.SetTargeted(true);
-        activeArrow.GetComponent<TurnIndicator>().SetTarget(view.transform);
+        if (hoveredView != null && hoveredView != view)
+            hoveredView.SetTargeted(false);
+
+        hoveredView = view;
+        view.SetTargeted(true);
     }
 
-    public void OnUnhoverEnemy() { }
+    public void OnUnhoverEnemy()
+    {
+        if (hoveredView == null)
+            return;
+
+        if (isTargeting && currentTarget != null && GetCharacterView(currentTarget) == hoveredView)
+        {
+            hoveredView = null;
+            return;
+        }
+
+        hoveredView.SetTargeted(false);
+        hoveredView = null;
+    }
 }
