@@ -15,6 +15,9 @@ public class TurnIndicator : MonoBehaviour
     public void SetTarget(Transform newTarget)
     {
         target = newTarget;
+        var scale = transform.localScale;
+        scale.x = -scale.x;
+        transform.localScale = scale;
     }
 
     public void RemoveTarget()

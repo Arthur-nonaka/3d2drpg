@@ -24,6 +24,9 @@ public class VisualEffectManager : MonoBehaviour
     private AudioClip HealSound;
 
     [SerializeField]
+    private GameObject healEffectPrefab;
+
+    [SerializeField]
     private RectTransform canvasTransform;
 
     private void Awake()
@@ -93,8 +96,8 @@ public class VisualEffectManager : MonoBehaviour
 
     public void PlayHealEffect(Vector3 position)
     {
-        if (hitEffectPrefab != null)
-            Instantiate(hitEffectPrefab, position, Quaternion.identity);
+        if (healEffectPrefab != null)
+            Instantiate(healEffectPrefab, position, Quaternion.identity);
 
         SoundManager.Instance.PlaySFX(HealSound);
     }

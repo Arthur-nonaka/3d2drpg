@@ -17,12 +17,17 @@ public class OptionsMenu : MonoBehaviour
     public AudioClip changeSound;
 
     public float dotDistance = -30f;
+    public Vector3 followOffset = new Vector3(-300f, 0f, 0f);
 
     private Stack<List<IAction>> actionStack = new();
     private List<RectTransform> currentButtons = new();
     private List<RectTransform> layerPanels = new();
     private int selectedIndex = 0;
     private int oldIndex = -1;
+
+    private Transform targetTransform;
+    private RectTransform canvasRect;
+    private Camera cam;
 
     private void Awake()
     {
@@ -32,11 +37,31 @@ public class OptionsMenu : MonoBehaviour
             return;
         }
         Instance = this;
+
+        cam = Camera.main;
+        var canvas = GetComponentInParent<Canvas>();
+        if (canvas != null)
+            canvasRect = canvas.GetComponent<RectTransform>();
     }
 
     public void ChangeFocus(Transform position)
     {
-        panelsContainer.position = position.position + new Vector3(4f, 2f, 0f);
+        targetTransform = position;
+    }
+
+    private void LateUpdate()
+    {
+        if (targetTransform == null || canvasRect == null || !gameObject.activeSelf)
+            return;
+
+        Vector2 screenPos = cam.WorldToScreenPoint(targetTransform.position);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            canvasRect,
+            screenPos,
+            null,
+            out Vector2 anchoredPos
+        );
+        panelsContainer.localPosition = anchoredPos + (Vector2)followOffset;
     }
 
     void Update()
@@ -50,9 +75,9 @@ public class OptionsMenu : MonoBehaviour
             MoveSelection(1);
         else if (Input.GetKeyDown(KeyCode.Z))
             SelectCurrent(true);
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
             SelectCurrent(false);
-        else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.X))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.X))
             PopLayer();
         else
             return;
@@ -84,7 +109,7 @@ public class OptionsMenu : MonoBehaviour
             var panel = layerPanels[0];
             panel.localScale = new Vector3(0.8f, 0.8f, 1f);
             panel.anchoredPosition = new Vector2(
-                panel.rect.width - (panel.rect.width * 0.1f),
+                -(panel.rect.width - (panel.rect.width * 0.1f)),
                 panel.anchoredPosition.y
             );
             AnimateLayerBackTransition();
@@ -164,7 +189,7 @@ public class OptionsMenu : MonoBehaviour
             Vector2 targetPos = !isCurrent
                 ? new Vector2(panel.anchoredPosition.x, panel.anchoredPosition.y)
                 : new Vector2(
-                    panel.rect.width - (panel.rect.width * 0.1f),
+                    -(panel.rect.width - (panel.rect.width * 0.1f)),
                     panel.anchoredPosition.y
                 );
             AnimatePanel(panel, targetScale, targetPos, 0.10f);
@@ -202,6 +227,9 @@ public class OptionsMenu : MonoBehaviour
         {
             selectionDot.SetParent(currentButtons[selectedIndex], false);
             selectionDot.anchoredPosition = new Vector2(dotDistance, 0);
+            var scale = selectionDot.localScale;
+            scale.x = -scale.x;
+            selectionDot.localScale = scale;
             selectionDot.gameObject.SetActive(true);
             SoundManager.Instance.PlaySettings(changeSound);
         }
